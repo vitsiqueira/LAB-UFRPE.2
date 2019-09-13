@@ -1,10 +1,17 @@
 def grafo():
-    N,inicio,final = map(lambda i: int(i),input().split(' '))
-    grafo = [[] for j in range(N)]
-    for j in range(N-1):
-        P,S,V = map(lambda i: int(i),input().split(' '))
-        grafo[P-1].append((S-1,V))
-        grafo[S-1].append((P-1,V))
+    N,inicio,final = map(lambda i: int(i),input().split(" "))
+    if N < 2 or N > 10**5:
+        print("ERRO")
+
+    else:
+        if inicio != final:
+            grafo = [[] for j in range(N)]
+            for j in range(N-1):
+                P,S,V = map(lambda i: int(i),input().split(" "))
+                grafo[P-1].append((S-1,V))
+                grafo[S-1].append((P-1,V))
+        else:
+            print("ERRO")
 
     eq_caminho(grafo,inicio-1,final-1)
 
