@@ -1,3 +1,4 @@
+#a ideia é calcular o menor caminho utilizando o algoritmo de dijkstra, assim pagando sempre o menor frete possível.
 #o grafo deve ser mostrado no código antes da sua execução.
 graph = {'a':{'b':4, 'd':3},
         'b':{'e':1},
